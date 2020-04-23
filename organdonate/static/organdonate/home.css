@@ -1,0 +1,15 @@
+.div1{
+   margin-left: 100 px;
+    margin-right: 100 px;
+    margin-top: 50 px;
+    margin-bottom: 200 px;
+    background-color: cornsilk;
+}
+
+.box{
+   width: 100 px;
+    height: 100 px;
+    padding: 50 px;
+    background-color:blue;
+
+}

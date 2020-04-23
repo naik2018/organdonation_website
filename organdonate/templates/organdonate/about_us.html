@@ -1,0 +1,180 @@
+{% extends "organdonate/base.html" %}
+{%  load static %}
+{% block content%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">       
+        <style>
+            body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+body {margin:0;height:2000px;background: cyan;}
+
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #4d98bb;
+  color: white;
+}
+
+.instagram {
+    background: rgb(201, 131, 104);
+    color: white;
+}
+
+
+.linkedin {
+  background: #4d98bb;
+  color: white;
+}
+
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
+}
+        </style>
+    </head>
+    <body>
+        <div class="about-section">
+            <h1>About Us </h1>
+            <p>This is our Website project using Django Framework</p>
+            <p>By, Developing This website we will try to help the needy people</p>
+          </div>
+          
+          <h2 style="text-align:center ; color: brown; font-weight: bold; font-size: 40px;">Our Team</h2>
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                <img src="{% static 'organdonate/tejaswini.jpeg' %}" alt="Tejaswini" style="width:100%;height: 700px;">
+          <div class="container">
+            <h2>Tejaswini Ashok Bahurupi</h2>
+            <p class="title">Full Stack Developer</p>
+            <p>Studing computer engineering at Sarvajanik college of engineering </p>
+            <p>tejubahurupi@gmail.com</p>
+            <a href="https://www.linkedin.com/in/tejaswini-bahurupi-53b920169" class="linkedin">Contact me on &nbsp;<i class="fa fa-linkedin" style="font-size:20px;"></i>&nbsp;</i></a>
+    <br><br></div>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <img src="{% static 'organdonate/kshitij.jpeg' %}" alt="Kshitij" style="width:100%;height:700px ;">
+                <div class="container">
+            <h2>Kshitij Ashish Naik</h2>
+            <p class="title">Full Stack Developer</p>
+            <p>Studing computer engineering at Sarvajanik college of engineering</p>
+            <p>kshitijnaik2017@gmail.com</p>
+            <a href="https://www.linkedin.com/in/kshitij-naik-42369a183" class="linkedin">Contact me on &nbsp;<i class="fa fa-linkedin" style="font-size:20px;"></i>&nbsp;</i></a>
+    <br><br>
+          </div>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                
+                <div class="container">
+                  <h2><center>Contact with us on:</center></h2>
+                  <a href="https://www.facebook.com/profile.php?id=100004646236075" class="facebook">Contact us on &nbsp;<i class="fa fa-facebook">&nbsp;</i></a>
+                  <br>
+                  <br>
+                  <a href="https://instagram.com/crystal_cfg?igshid=16rt4uw2phoys" class="instagram" >follow us on &nbsp;<i class="fa fa-instagram" style="color:pink;">&nbsp;</i></a>
+                    <br>
+                    <p style="color: brown;">Contact us on gmail:<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=crystalshinedonation@gmail.com&su=SUBJECT&body=BODY&tf=1">crystalshinedonation@gmail.com</a></p>
+                    <br>
+<br>
+                </div>
+              </div>
+            </div>
+        </div>
+        {% endblock content %}1
+    </body>
+</html>

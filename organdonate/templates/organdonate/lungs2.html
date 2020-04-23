@@ -1,0 +1,85 @@
+{%  load static %}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eye Donation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    position: relative;
+  }
+  ul.nav-pills {
+    top: 20px;
+    position: fixed;
+  }
+  div.col-sm-9 div {
+    height: 600px;
+    font-size: 20px;
+  }
+  #section1 {color: #fff; background-color: rgb(229, 149, 30);}
+  #section2 {color: #fff; background-color: #513ab7;}
+  #section3 {color: #fff; background-color: #ff4800;}
+  #section4 {color : blue;background-color:aqua;}
+  
+  @media screen and (max-width: 810px) {
+    #section1, #section2, #section3, #section41, #section42  {
+      margin-left: 150px;
+    }
+  }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20" alink="white" vlink="yellow">
+
+<div class="container">
+  <div class="row">
+    <nav class="col-sm-3" id="myScrollspy">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Basic Information</a></li>
+        <li><a href="#section2">When is a lung donation needed?</a></li>
+        <li><a href="#section3">Why do people need a lung donation?</a></li>
+        <li><a href="#section4">Want to receive Lungs?</li>
+      </ul>
+    </nav>
+    <div class="col-sm-9">
+        <div id="section1">    
+            <h1>Lung Donation
+            </h1>
+            <p>A lung transplant is a surgical procedure to replace a diseased or failing lung with a healthy deceased donor lung. Depending on the medical condition, a lung transplant may involve replacing one or both lungs. Currently, 1,400 people in the United States are on the national transplant waiting list for a donor lung. What are the basics of lung donation? Read below for more information.</p>
+        </div>
+        <div id="section2"> 
+            <h1>When is a lung donation needed?</h1>
+            <p> Unhealthy or damaged lungs can make it difficult for the body to get the oxygen it needs to survive. Lung damage can often be treated with medication or with special breathing devices. If these measures no longer help or if the patient’s lung function becomes life-threatening, a lung transplant may be needed.</p>
+            <p>A variety of diseases and conditions can damage lungs and hinder their ability to function effectively, such as COPD (chronic obstructive pulmonary disease) including emphysema, scarring of the lungs known as pulmonary fibrosis, cystic fibrosis, sarcoidosis with advanced fibrosis, and pulmonary hypertension.</p>
+        </div>        
+        <div id="section3">         
+            <h1>Why do people need a lung donation?</h1>
+            <p>Your lungs are a delicate part of the vital flow of oxygen round the body. When this process becomes damaged or the lungs are diseased, people can quite quickly become very seriously ill.
+                A lung transplant may become the only option for people suffering from:</p>
+            <ol>
+                <li>Cystic fibrosis – a genetic condition that clogs the lungs with mucus, making it hard to breathe and digest food
+                </li><li>COPD (chronic obstructive pulmonary disease) – the name for a number of diseases that damage the lungs
+                </li><li>raised blood pressure within the arteries serving the lungs (pulmonary hypertension)
+                </li> <li>Scarring of the lungs (idiopathic pulmonary fibrosis).</li>
+            </ol>
+      </div>
+        <div id="section4">         
+          <h1>Want to receive Lungs?</h1>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{%  static 'organdonate/lungs3.jpg' %}" alt="Card image cap">
+            <div class="card-body">
+              <a href="{%  url 'registration' %}" class="btn btn-primary">Register yourself as a lungs receiver</a>
+            </div>
+          </div>      
+     </div>      
+    </div>
+  </div>
+</div>
+{% endblock content %}
+</body>
+
+</html>

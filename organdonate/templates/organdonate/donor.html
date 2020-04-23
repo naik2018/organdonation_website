@@ -1,0 +1,324 @@
+{% extends "organdonate/base.html" %}
+{%  load static %}
+{% block content%}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTFd-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <style>
+            /*.circle {
+                margin: 10px auto;
+                background: lightblue;
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+                }
+                .left{
+                    margin-left: 150px;
+                }
+
+                .xleft{
+                    margin-left: 150px;
+                }
+        
+                .center{
+                    margin-left: 150px;
+                }
+                .right{
+                    margin-left: 150px;
+                }
+
+                .xright{
+                margin-top:350px;
+                margin-left:-650px;
+                }
+                .square{
+                   
+                    height: 150px;
+                    width: 150px;
+                    background-color: blue;
+                    float: left;
+                }
+                .h1{
+                    margin-top: 50px;
+                    float: left;
+                }*/
+                *{
+                    padding: 0;
+                    margin: 0;
+                }
+        body{
+            background:rgb(202, 228, 55);
+        }
+        .a1{
+            padding:20px 80px;
+            color:#4303f4;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: 1.0s;
+            letter-spacing: 4px;
+            border: 1px solid #03e9f4;
+            outline:0;
+            border-radius:5px;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .a1:hover{
+            background: #03e9f4;
+            color:#fff;
+            text-decoration: none;
+            box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4 ;
+        }
+        /* .w1{
+            position: absolute;
+            top:120%;
+            left:50%;
+            text-align:center;
+            transform:translate(-50%,-50%);
+        }
+        .a1{
+            padding:20px 80px;
+            color:#03e9f4;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: 1.0s;
+            letter-spacing: 4px;
+            border: 1px solid #03e9f4;
+            outline:0;
+            border-radius:5px;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .a1:hover{
+            background: #03e9f4;
+            color:#fff;
+            text-decoration: none;
+            box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4 ;
+        }
+         */
+        .main{
+            width: calc(100% - 20rem);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10rem;
+        }
+        .main-card-body{
+            position: relative;
+            width:calc(100% / 3 - 1rem);
+            margin: .5rem;
+            height: 400px;
+            perspective: 150rem;
+            cursor: pointer;
+            text-align: center;
+        }
+        .main-card-body:hover .main-card-front{
+            transform: rotateY(-180deg);
+            z-index:0;
+        }
+
+        .main-card-body:hover .main-card-back{
+            transform: rotateY(0deg);
+            z-index:1;
+        }
+
+        .main-card{
+            width:100%;
+            height :100%;
+            background: #fff;
+            border-radius: 0.25rem;
+            position: absolute;
+            top: 0;
+            left:0;
+            transition: all .8s;
+            backface-visibility: hidden;
+            box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
+        }
+        .main-card-front{
+            transform:rotateY(0deg);
+            z-index: 1;
+        }
+
+        .main-card-back{
+            transform: rotateY(180deg);
+        }
+
+        .main-card-front-1{
+           background-image: linear-gradient(to right bottom,#d8345f,#28b485); 
+        }
+
+        .main-card-back-1{
+           background-image: linear-gradient(to right bottom,#d8345f,#28b485); 
+        }
+
+        .main-card-front-2{
+           background-image: linear-gradient(to right bottom,#d8345f,#28b485); 
+        }
+
+        .main-card-back-2{
+           background-image: linear-gradient(to right bottom,#d8345f,#28b485); 
+        }
+
+        .main-card-front-3{
+           background-image: linear-gradient(to right bottom,#d8345f,#28b485); 
+        }
+
+        .main-card-back-3{
+           background-image: linear-gradient(to right bottom,#d8345f,#28b485); 
+        }
+
+        h1{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            font-size:50px;
+            width: 100%;
+            color: #fff;
+        }
+
+        .img_x{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            font-size:50px;
+            height: 50%;
+            width: 50%;
+            color: #fff;
+        }
+
+        </style>
+    
+    </head>
+    <body>
+      <!--  <link rel = "stylesheet" href = "{% static 'organdonate/shapes.css'%}"  type="text/css">
+        
+
+    <div class = "circle">
+        <img src="{%  static 'organdonate/signup.png' %}" height="150px" width="150px" style="margin: 25px; " >
+
+    </div> 
+
+		<div class = "square left">
+            <a href="{%  url 'eye' %}">
+            <img src="{%  static 'organdonate/eye2.png' %}" height="150px" width="150px" >
+            </a>
+        </div>
+        
+        <div class = "square xleft">
+            <a href="{% url 'heart' %}">
+            <img src="{%  static 'organdonate/donateheart.jpg' %}" height="150px" width="150px">
+            </a>
+		</div>
+
+
+		<div class = "square center">
+            <a href="{% url 'kidney' %}">
+            <img src="{%  static 'organdonate/kidney.jpg' %}" height="150px" width="150px"  >
+            </a>
+		</div>
+
+		<div class = "square right">
+            <a href="{% url 'lungs' %}">
+            <img src="{%  static 'organdonate/lungs.jfif' %}" height="150px" width="150px"  >
+            </a>
+        </div>
+        
+        <div class = "square xright">
+            <a href="{% url 'more_info' %}">
+            <img src="{%  static 'organdonate/clickhere.jpg' %}" height="150px" width="150px" >
+            </a>
+        </div>
+        <br>
+        <br>
+        <h1 class="h1">
+            You can even donate your money to help the ine who has organ but no money for transplant!!!
+           
+      
+      </h1>-->
+      <div class="main">
+          <div class="main-card-body">
+              <div class="main-card main-card-front main-card-front-1">
+                  <h1>Eyes</h1>
+              </div>
+              <div class="main-card main-card-back main-card-back-1">
+                <a href="{%  url 'eye' %}">
+                    <img src="{%  static 'organdonate/eye2.png' %}" height="150px" width="150px">
+                    <h1>Click Here</h1>
+                    </a>            
+                </div>
+          </div>
+          <div class="main-card-body">
+            <div class="main-card main-card-front main-card-front-2">
+                <h1>Heart</h1>
+            </div>
+            <div class="main-card main-card-back main-card-back-2">
+                <a href="{% url 'heart' %}">
+                    <img src="{%  static 'organdonate/donateheart.jpg' %}" height="150px" width="150px">
+                    <h1>Click Here</h1>
+                </a> 
+          </div>
+          
+        </div>
+        <div class="main-card-body">
+            <div class="main-card main-card-front main-card-front-3">
+                <h1>Kidney</h1>
+            </div>
+            <div class="main-card main-card-back main-card-back-3">
+                <a href="{% url 'kidney' %}">
+                    <img src="{%  static 'organdonate/kidney.jpg' %}" height="150px" width="150px" >
+                    <h1>Click Here</h1>
+                </a>
+          </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="main">
+        <div class="main-card-body">
+            <div class="main-card main-card-front main-card-front-1">
+                <h1>Lungs</h1>
+            </div>
+            <div class="main-card main-card-back main-card-back-1">
+                <a href="{% url 'lungs' %}">
+                    <img src="{%  static 'organdonate/lungs.jfif' %}" height="150px" width="150px" >
+                    <h1>Click Here</h1>
+                </a>
+                
+            </div>
+          
+        </div>
+        <div class="main-card-body">
+          <div class="main-card main-card-front main-card-front-2">
+              <h1>More Information</h1>
+          </div>
+          <div class="main-card main-card-back main-card-back-2">
+            <a href="{% url 'more_info' %}">
+                <img src="{%  static 'organdonate/clickhere.jpg' %}" height="150px" width="150px" >
+                <h1>Click Here</h1>
+            </a>        
+        </div>
+        
+      </div>
+      
+      
+    </div>
+      <!--<div class="w1">
+        <a class="a1" href="{%  url 'register' %}">Click here to donate</a>
+    </div>-->
+    <h3>
+        <center>
+    <a class="a1" href="{%  url 'register' %}">Click here to donate</a>
+</center>
+<br>
+<br>
+<br>
+    </h3>
+        {% endblock content %}
+    </body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'organdonate/base.html' %}
+{% load crispy_forms_tags%}
+<html>
+    <head>Registration page for receiver</head>
+    <body>
+{% block content %}
+<div >
+
+<h1>
+    Register Yourself
+</h1>
+<table >
+    <form action = " " method= "POST">
+        {% csrf_token %}
+        {{form.as_table}}
+        
+        <button type="submit">Submit</button>
+        
+    </form>
+    
+</table>
+</div>
+{% endblock content %}
+</body>
+</html>

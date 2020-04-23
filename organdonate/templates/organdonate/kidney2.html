@@ -1,0 +1,80 @@
+{%  load static %}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eye Donation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    position: relative;
+  }
+  ul.nav-pills {
+    top: 20px;
+    position: fixed;
+  }
+  div.col-sm-9 div {
+    height: 600px;
+    font-size: 20px;
+  }
+  #section1 {color: #fff; background-color: rgb(40, 77, 109);}
+  #section2 {color: #fff; background-color: #0d5814;}
+  #section3 {color: #fff; background-color: #ff4800;}
+  #section4 {color : rgb(65, 65, 145);background-color:aqua;}
+  
+  @media screen and (max-width: 810px) {
+    #section1, #section2, #section3, #section41, #section42  {
+      margin-left: 150px;
+    }
+  }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20" alink="white" vlink="yellow">
+
+<div class="container">
+  <div class="row">
+    <nav class="col-sm-3" id="myScrollspy">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Basic Information</a></li>
+        <li><a href="#section2">How can my donor kidney help?</a></li>
+        <li><a href="#section3">Who can be a living donor?</a></li>
+        <li><a href="#section4">Want to receive Kidney?</li>
+      </ul>
+    </nav>
+    <div class="col-sm-9">
+        <div id="section1">    
+            <h1>Kidney Donation
+            </h1>
+            <p>A kidney transplant is a surgical procedure to place a kidney from a living or deceased donor into a person whose kidneys no longer function properly. Currently, 100,000 people in the United States are on the national transplant waiting list for a donor kidney. So what are the basics of kidney donation? Read on for more information.  </p>
+            <p>The eyes, which are received through such magnanimous gestures, are of great benefit to the society. The front, clear and transparent tissue of the eye called as cornea can be used to restore vision to corneal blind person. The other portions of the eye are also used for research and training purposes to develop cures for some of the common eye diseases.
+            </p>
+        </div>
+        <div id="section2"> 
+            <h1>How can my donor kidney help?</h1>
+            <p> Every 10 minutes, another person is added to the national transplant waiting list — and 82% of patients waiting are in need of a kidney. On average, a living donor kidney can function anywhere between 12 to 20 years, and a deceased donor kidney can improve quality of life for 8 to 12 years. Plus, patients who receive preemptive kidney transplant see a number of benefits (especially for children and adolescents with end-stage kidney disease).</p>
+        
+        <p>Because a person can live with only one kidney, living donation offers another choice for some transplant candidates. The average waiting time for a donor kidney from a deceased donor is 3 to 5 years. A kidney from a living donor offers patients an alternative to years of dialysis and time on the national transplant waiting list. With living donation, a patient may be able to receive a transplant in 1 year or less. After donation, the living organ donor’s remaining kidney will enlarge, doing the work of 2 healthy kidneys.</p></div>        
+        <div id="section3">         
+            <h1>Who can be a living donor?</h1>
+            <p>Family members are often the most likely to be compatible living kidney donors, but many people undergo successful transplants with kidneys donated from people who are not related to them. Living donors will have a full medical exam, must be at least 18 years old, and in good physical and mental health. Different transplant centers have different limits on who can donate. The Kidney Transplant Learning Center offers resources on how to prepare to make the living donor ask and/or to have a family member or friend serve as a living donor champion.</p>
+      </div>
+      <div id="section4">         
+        <h1>Want to receive kidney?</h1>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{%  static 'organdonate/kidney3.jpg' %}" alt="Card image cap">
+          <div class="card-body">
+            <a href="{%  url 'registration' %}" class="btn btn-primary">Register yourself As a Kidney Receiver</a>
+          </div>
+        </div> 
+      </div>      
+    </div>
+  </div>
+</div>
+
+</body>
+{% endblock content %}
+</html>

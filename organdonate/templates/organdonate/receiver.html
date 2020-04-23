@@ -1,0 +1,95 @@
+{% extends "organdonate/base.html" %}
+{%  load static %}
+{% block content%}
+
+<html>
+    <head>
+        <style>
+            body{
+                background: chartreuse;
+            }
+            .circle {
+                margin: 10px auto;
+                background: lightblue;
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+                }
+                .left{
+                    margin-left: 100px;
+                }
+
+                .xleft{
+                    margin-left: 100px;
+                }
+        
+                .center{
+                    margin-left: 100px;
+                }
+                .right{
+                    margin-left: 100px;
+                }
+
+                .xright{
+                    margin-left: 100px;
+                }
+                .square{
+                    height: 150px;
+                    width: 150px;
+                    background-color: blue;
+                    float: left;
+                }
+                h1{
+                    float: left;
+                }
+            </style>
+    </head>
+    <body>
+        
+
+    <div class = "circle">
+        <img src="{%  static 'organdonate/signup.png' %}" height="150px" width="150px" style="margin: 25px; " >
+
+    </div>
+
+		<div class = "square left">
+            <a href="{%  url 'eye2' %}">
+            <img src="{%  static 'organdonate/eye.jpg' %}" height="150px" width="150px" >
+            </a>
+        </div>
+        
+        <div class = "square xleft">
+            <a href="{% url 'heart2' %}">
+            <img src="{%  static 'organdonate/heart2.jpg' %}" height="150px" width="150px">
+            </a>
+		</div>
+
+
+		<div class = "square center">
+            <a href="{% url 'kidney2' %}">
+            <img src="{%  static 'organdonate/kidney2.jpg' %}" height="150px" width="150px"  >
+            </a>
+		</div>
+
+		<div class = "square right">
+            <a href="{% url 'lungs2' %}">
+            <img src="{%  static 'organdonate/lungs2.jpg' %}" height="150px" width="150px"  >
+            </a>
+        </div>
+        
+        <div class = "square xright">
+            <a href="{% url 'more_info2' %}">
+            <img src="{%  static 'organdonate/clickhere.jpg' %}" height="150px" width="150px" >
+            </a>
+        </div>
+        <br>
+        <br>
+        <h1>
+            &nbsp;&nbsp;
+            <center><a href="{%  url 'registration' %}"><button type="button" class="btn btn-outline-danger btn-lg">Click here to apply as receiver</button></a>
+            </center>
+            </h1>
+    {% endblock content %}
+
+    </body>
+</html>

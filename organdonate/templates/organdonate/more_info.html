@@ -1,0 +1,164 @@
+{% extends "organdonate/base.html" %}
+{%  load static %}
+{% block content%}
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style type=text/css> 
+    .p1{ 
+    color: white; 
+    background-color: rgb(238, 130, 130); 
+    width: 800px; 
+    } 
+    .h1 
+    { 
+    color: white; 
+    background-color: 009900; 
+    width: 800px; 
+    } 
+    .h2 
+    { 
+    color: white; 
+    background-color: 009900; 
+    width: 800px; 
+    } 
+ </style>  
+</head>
+
+<body > 
+    <div style="padding-left: 40;">
+        
+</div>
+<div style="padding-left: 40;">
+    <h1 style="color: brown;">About Some Information that donor should know</h1>
+</div>
+<div style="padding-left: 40;">
+    <br>
+    
+      <h3 style="color:rgb(78, 15, 15)" style="padding-left: 40;"> Transplant History</h3>
+<br>
+      <p class="p1" style="padding-left: 40;font-size: 25;">Researchers experimented with organ transplantation on animals and humans in the 18th century. There were many failures over the years, but by the mid-20th century, scientists were performing successful organ transplants. Transplants of kidneys, livers, hearts, pancreata, intestine, lungs, and heart-lungs are now considered routine medical treatment.
+
+        Important medical breakthroughs such as tissue typing and immunosuppressant drugs allow for more organ transplants and a longer survival rate for recipients. The most notable development in this area was Jean Borel's discovery of an immunosuppressant drug in the mid-1970s. Cyclosporine was approved for commercial use in November 1983.
+        
+        Unfortunately, the need for organ transplants continues to exceed the supply of organs. But as medical technology improves and more donors become available, the number of people who live longer and healthier lives continues to increase each year.
+      </p> 
+      <br>
+      <h3 style="color:rgb(78, 15, 15)" style="padding-left: 40;"> Matching Donors and Recipients</h3>
+    <br>
+       <p class="p1" style="padding-left: 40;font-size: 25;">The donation process begins with a decision. You decide you want to help people with end-stage disease by donating your organs when you die. Your body, after all, is finished with them.
+
+        When your time comes, perhaps decades later, your organs may be used to save many lives. People most frequently become donors after a stroke, heart attack or severe head injury.
+        
+        Even though cases vary, the following describes the basic steps in donation from deceased donors.
+      </p> 
+      <br>
+      </div>
+    <div class="accordion" id="accordionExample" style="padding-left: 40;">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-size: 25;">
+                ‌	How Are Hearts Matched?
+              </button>
+            </h2>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample" style="background-color: rgb(167, 75, 167); color: white ;">
+            <div class="card-body"  style="font-size: 20;">
+                Living donors potentially can donate: People waiting for a heart transplant are assigned a status code, which indicates how urgently they need a heart. Because organs such as the heart and lungs can survive outside the body for only 4 to 6 hours, they are given first to people who live near the hospital where organs are recovered from the donor.
+
+                If no one near the donor is a match for the heart, the transplant team starts searching progressively farther away to identify a recipient. Body size also is especially important in heart matching, as the donor's heart must fit comfortably inside the recipient's rib cage.            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"  style="font-size: 25;">
+                How Are Heart-Lungs Matched?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample" style="background-color: rgb(167, 75, 167); color: white ;">
+            <div class="card-body"  style="font-size: 20;">
+                Candidates for a heart-lung transplant are registered on both the OPTN Heart Waiting List and the OPTN Lung Waiting List. If a donor heart becomes available, the patient will receive a lung to go with it from the same donor. If a lung becomes available, the donor's heart will be given to the heart/lung patient as well.
+
+                Because these organs can survive outside the body for only 4 to 6 hours, they are given first to people near the donor. If no one near the donor is a match for the heart and lungs, the recovery team starts searching farther away.            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse"  style="font-size: 25;" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                How Are Livers Matched?
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample" style="background-color: rgb(167, 75, 167); color: white ;">
+            <div class="card-body"  style="font-size: 20;">
+                Candidates who need a liver transplant are assigned a MELD or PELD score (Model for End-Stage Liver Disease or Pediatric End-Stage Liver Disease) that indicates how urgently they need the organ. A donor liver is offered first to the candidate who matches on the above common elements and has the highest MELD or PELD score first (indicating the most need).
+
+                If the first recipient's surgeon does not accept the organ then the liver is offered to matching patients with the next highest MELD or PELD scores until the organ is accepted. Geographic factors are also taken into consideration, but livers can remain outside the body for 12 to 15 hours so they can travel farther than hearts and lungs.            </div>
+          </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFour">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"  style="font-size: 25;" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    How Are Lungs Matched?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample" style="background-color: rgb(167, 75, 167); color: white ;">
+              <div class="card-body"  style="font-size: 20;">
+                The lung allocation system uses information such as lab values, test results, and disease diagnosis—to arrive at a number which represents an estimate of the urgency of a candidate's need for transplant and the likelihood of prolonged survival following the transplant. This lung allocation score, and the common factors listed above, are considered to determine the order in which a donated lung is offered to potential recipients.
+
+                Body size and distance between hospitals are especially important because lungs also must fit within the rib cage, and can survive outside the body for only 4 to 6 hours. Lungs are therefore offered first to people near the donor's hospital. If no one near the donor is a match for the lung, the recovery team starts searching progressively farther away.</div>
+          </div>
+        </div>
+          <div class="card">
+            <div class="card-header" id="headingFive">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"  style="font-size: 25;" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    How Are the Kidneys Matched?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample" style="background-color: rgb(167, 75, 167); color: white ;">
+              <div class="card-body"  style="font-size: 20;" >
+                The identification of potential recipients for a donor kidney involves the common elements noted above including blood type, length of time on the waiting list, whether the recipient is a child, and whether the body sizes of the donor and recipient are a good match. Other factors used to match kidneys include a negative lymphocytotoxic crossmatch and the number of HLA antigens in common between the donor and the recipient based on tissue typing. Many kidneys can stay outside the body for 36-48 hours so many more candidates from a wider geographic area can be considered in the kidney matching and allocation process than is the case for hearts or lungs.</div>
+          </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingSix">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"  style="font-size: 25;" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                How Are the Eyes Matched?
+            </button>
+          </h2>
+        </div>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample" style="background-color: rgb(167, 75, 167); color: white ;">
+          <div class="card-body"  style="font-size: 20;" >
+            Cornea is the only part of the eye can be transplanted, and not the whole eye. When someone receives an “eye transplant,” they are being given a donor cornea, the clear front part of the eye. The corneal transplant requires a functioning retina and optic nerve to restore vision.</div>
+        </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div style="padding-left: 40;">
+    <h1>Want to donate Organs?</h1>
+    <a href="{%  url 'register' %}"><button type="button" class="btn btn-success">Register yourself as an organ donor</button>
+        </a>
+        <br>
+        <br>
+        <br>
+  </div>
+      {% endblock content %}
+
+</body>   
+</html>

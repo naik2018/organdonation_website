@@ -1,0 +1,86 @@
+{%  load static %}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eye Donation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    position: relative;
+  }
+  ul.nav-pills {
+    top: 20px;
+    position: fixed;
+  }
+  div.col-sm-9 div {
+    height: 400px;
+    font-size: 20px;
+  }
+  #section1 {color: #fff; background-color: #1E88E5;}
+  #section2 {color: #fff; background-color: #673ab7;}
+  #section3 {color: #fff; background-color: #ff9800;}
+  #section4 {color : blue;background-color:aqua;}
+  
+  @media screen and (max-width: 810px) {
+    #section1, #section2, #section3, #section41, #section42  {
+      margin-left: 150px;
+    }
+  }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20" alink="white" vlink="yellow">
+
+<div class="container">
+  <div class="row">
+    <nav class="col-sm-3" id="myScrollspy">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Basic Information</a></li>
+        <li><a href="#section2">How can one donate eye?</a></li>
+        <li><a href="#section3">Who can donate Eye?</a></li>
+        <li><a href="#section4">Want to donate Eyes?</li>
+      </ul>
+    </nav>
+    <div class="col-sm-9">
+        <div id="section1">    
+            <h1>Eye Donation and use of received Eyes
+            </h1>
+            <p>Eye donation is an act of donating one’s eyes after his/her death. Only corneal blinds can be benefitted through this process not other Blinds. It is an act of charity, purely for the benefit of the society and is totally voluntary. It is done after death. So eye-donation should be encouraged in a large scale, as one of the best means of social service. To enable another person obtain vision is one of the best forms of charity. Even after death the donor lives in the eyes of recipient. Eyes from a dead person can enable two blind people to acquire vision.</p>
+            <p>The eyes, which are received through such magnanimous gestures, are of great benefit to the society. The front, clear and transparent tissue of the eye called as cornea can be used to restore vision to corneal blind person. The other portions of the eye are also used for research and training purposes to develop cures for some of the common eye diseases.
+            </p>
+        </div>
+        <div id="section2"> 
+            <h1>How can one donate eyes?</h1>
+            <p> The eyes of a dead person can be used only if they are taken out within 6 hrs of death. When a person who has given consent for the donation of one's eyes dies, the eye should be kept wet by sprinkling water on them. Otherwise pieces of cotton wool soaked in water should be placed on both the eyes so that the cornea does not become dry till the eye-surgeon arrives. After the removal of the eyes the eyelids will be stitched together and there will be no visible sign of the eyes having been removed. The entire process is completed within 10-15 mins, therefore if one pledged to donate his eyes after death, it is the duty of his relatives to inform to the nearest eye bank after his death.
+            </p>
+        </div>        
+        <div id="section3">         
+            <h1>Who can donate eyes?</h1>
+            <p>Any person of any age can donate eyes. Even if the deceased has medical history of hypertension, diabetes, asthma, tuberculosis etc., and even spectacle wearers and people who have undergone cataract operation can donate eyes.
+            </p>
+            <p>Patients suffering from Rabies, Tetanus, Aids, Jaundice, Cancer, Gangrene, Brain Tumer, Food Poisoning, Septosamia & a person who has died due to drowning etc. cannot donate their eyes.
+            </p>
+      </div>
+      <div id="section4">         
+        <h1>Want to donate Eyes?</h1>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{%  static 'organdonate/eye3.jpg' %}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Donate Your Eyes</h5>
+            <p class="card-text"> Enlight Someone's World By donating Your Eyes</p>
+            <a href="{%  url 'register' %}" class="btn btn-primary">Register yourself As an Eye Donor</a>
+          </div>
+        </div>
+            <br>
+      </div>      
+    </div>
+  </div>
+</div>
+{% endblock content %}
+</body>
+
+</html>

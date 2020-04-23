@@ -1,0 +1,48 @@
+{% extends 'organdonate/base.html' %}
+{% load crispy_forms_tags%}
+{% block content %}
+<div >
+
+<h1><center>
+    List of people who donated their eyes
+</center>
+</h1>
+<table class="table table-striped" align="center" >
+    <thead class="thead-dark">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Organ
+        </th>
+        <th>
+            Blood Group
+        </th>
+    </tr>
+</thead>
+<tbody>
+    {% for i in donor %}
+    <tr>
+        {%  if i.organ == 'Eyes' %}
+        <td>
+            {{i.name}}
+        </td>
+                
+        <td>
+            {{i.organ}}
+        </td>
+        <td>
+            {{i.bloodgrp}}
+        </td>
+        <td>
+
+        </td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+</div>
+
+{% endblock content %}

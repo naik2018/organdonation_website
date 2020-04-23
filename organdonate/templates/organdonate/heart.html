@@ -1,0 +1,85 @@
+{%  load static %}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eye Donation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    position: relative;
+  }
+  ul.nav-pills {
+    top: 20px;
+    position: fixed;
+  }
+  div.col-sm-9 div {
+    height: 400px;
+    font-size: 20px;
+  }
+  #section1 {color: #fff; background-color: rgb(90, 30, 229);}
+  #section2 {color: #fff; background-color: red;}
+  #section3 {color: #fff; background-color: #ff9800;}
+  #section4 {color : blue;background-color:aqua;}
+  
+  @media screen and (max-width: 810px) {
+    #section1, #section2, #section3, #section41, #section42  {
+      margin-left: 150px;
+    }
+  }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20" alink="white" vlink="yellow">
+
+<div class="container">
+  <div class="row">
+    <nav class="col-sm-3" id="myScrollspy">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Basic Information</a></li>
+        <li><a href="#section2">Can I be a heart donor?</a></li>
+        <li><a href="#section3">How can one donate Heart?</a></li>
+        <li><a href="#section4">Want to donate Heart?</a></li>
+      </ul>
+    </nav>
+    <div class="col-sm-9">
+        <div id="section1">    
+            <h1>When is a heart donation needed?
+            </h1>
+            <p>Heart transplants are performed when there are no other treatments available for an individual in heart failure. According to the American Heart Association, “heart failure” is a term used to describe a heart that cannot keep up with its workload. The body may not get the oxygen it needs. Heart failure in adults can be caused by coronary artery disease (CAD); a weakening of the heart muscle (cardiomyopathy); valvular heart disease; a problem present at birth (congenital heart defect); or the failure of a previous transplant. In children, heart failure is most often the result of a congenital heart defect or cardiomyopathy.</p>
+        </div>
+        <div id="section2"> 
+            <h1>Can I be a heart donor?</h1>
+            <p>There are never enough donor hearts for all the people waiting for a heart transplant. We encourage everyone to be a donor for the following reasons:</p>
+            <ul>
+                <li>Your heart’s health will be assessed before it is retrieved for transplantation</li>
+                <li>All the major religious faiths support heart donation</li>
+                <li>There are very few health-related restrictions and most people can donate.</li>
+            </ul>
+        </div>        
+        <div id="section3">         
+            <h1>How can one donate Heart?</h1>
+            <p> Tell your friends and family that you want to be a heart donor – it is very important that they understand and support your organ donation decision because your family’s support is needed for donation to go ahead. Dealing with the death of a loved one is a difficult time to make an important decision quickly.
+            </p>
+        </div>
+      <div id="section4">         
+        <h1>Want to donate Heart?</h1>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{%  static 'organdonate/heart3.jpg' %}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Donate Your Heart</h5>
+            <p class="card-text"> Your heart can heal someone's broken heart.</p>
+            <a href="{%  url 'register' %}" class="btn btn-primary">Register yourself As a Heart Donor</a>
+          </div>
+        </div> 
+      </div>      
+    </div>
+  </div>
+</div>
+
+</body>
+{% endblock content %}
+</html>
